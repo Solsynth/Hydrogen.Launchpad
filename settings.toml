@@ -1,0 +1,21 @@
+debug = true
+
+name = "Goatworks"
+maintainer = "SmartSheep Studio"
+
+bind = "0.0.0.0:8443"
+domain = "index.smartsheep.studio"
+secret = "LtTjzAGFLshwXhN4ZD4nG5KlMv1MWcsvfv03TSZYnT1VhiAnLIZFTnHUwR0XhGgi"
+
+[security]
+cookie_domain = "localhost"
+cookie_samesite = "Lax"
+
+[components]
+identity = "https://id.smartsheep.studio"
+
+[[directory]]
+icon = "fa-solid fa-passport"
+name = "Goatpass"
+description = "Authorization Serivce"
+link = "https://id.smartsheep.studio"
