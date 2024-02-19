@@ -14,8 +14,16 @@ cookie_samesite = "Lax"
 [components]
 identity = "https://id.smartsheep.studio"
 
-[[directory]]
+# Directory
+
+[directory.goatpass]
 icon = "fa-solid fa-passport"
 name = "Goatpass"
 description = "Authorization Serivce"
 link = "https://id.smartsheep.studio"
+
+[directory.goatplaza]
+icon = "fa-solid fa-comments"
+name = "Goatplaza"
+description = "Social Media"
+link = "https://feed.smartsheep.studio"
