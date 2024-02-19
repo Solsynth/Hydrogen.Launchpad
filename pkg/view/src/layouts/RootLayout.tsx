@@ -1,3 +1,4 @@
+import Navigator from "./shared/Navigator.tsx";
 import { readProfiles } from "../stores/userinfo.tsx";
 import { createSignal, Show } from "solid-js";
 import { readWellKnown } from "../stores/wellKnown.tsx";
@@ -15,7 +16,9 @@ export default function RootLayout(props: any) {
         </div>
       </div>
     }>
-      {props.children}
+      <Navigator>
+        <main class="h-screen">{props.children}</main>
+      </Navigator>
     </Show>
   );
 }

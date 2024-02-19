@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@alioth-org/es-module-lexer@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@alioth-org/es-module-lexer/-/es-module-lexer-1.1.0.tgz#4d71080ed44732dc7605ab76cd94b1b144d514ad"
+  integrity sha512-2GrWjl8Whptm2Za2Zx+z8dm8Dz62hLWy1KPYEyplil4m28c6OR900iHNrYAYXS9QFCO1tqMABrl1daj6Mt66QQ==
+
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
@@ -186,13 +191,6 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/runtime@^7.18.6":
-  version "7.23.9"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.9.tgz#47791a15e4603bb5f905bc0753801cf21d6345f7"
-  integrity sha512-0CX6F+BI2s9dkUqr08KFrAIZgNFj75rdBU/DjCyYLIaV/quFjkk6T+EJ2LkZHyZTbEV4L5p97mNkUsHl2wLFAw==
-  dependencies:
-    regenerator-runtime "^0.14.0"
-
 "@babel/template@^7.22.15", "@babel/template@^7.23.9":
   version "7.23.9"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.23.9.tgz#f881d0487cba2828d3259dcb9ef5005a9731011a"
@@ -346,6 +344,65 @@
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-6.5.1.tgz#55cc8410abf1003b726324661ce5b0d1c10de258"
   integrity sha512-CNy5vSwN3fsUStPRLX7fUYojyuzoEMSXPl7zSLJ8TgtRfjv24LOnOWKT2zYwaHZCJGkdyRnTmstR0P+Ah503Gw==
+
+"@garfish/browser-snapshot@1.17.4":
+  version "1.17.4"
+  resolved "https://registry.yarnpkg.com/@garfish/browser-snapshot/-/browser-snapshot-1.17.4.tgz#dfd781e386e8d8606e21ca6401101bc1e5a26752"
+  integrity sha512-4rgtmDbeAot0jH/MEL6rMO26nMGwvTyOTnk7hVRwUic5G7Z44WrrYxtEYagHDheDIz08YRX/DZAQmpM5V2+D2Q==
+  dependencies:
+    "@garfish/core" "1.17.4"
+    "@garfish/utils" "1.17.4"
+
+"@garfish/browser-vm@1.17.4":
+  version "1.17.4"
+  resolved "https://registry.yarnpkg.com/@garfish/browser-vm/-/browser-vm-1.17.4.tgz#eb93c8d5d541f1cf60fef207a26e080d64074826"
+  integrity sha512-22ghwK7tGsG+FpLL9MVg8gl+fnG52ZHbGgHcDF6HWdKqLzvIT0euPN+zOqdlJm4wqad1A1jVti9RqNMKitz+dA==
+  dependencies:
+    "@garfish/core" "1.17.4"
+    "@garfish/hooks" "1.17.4"
+    "@garfish/loader" "1.17.4"
+    "@garfish/utils" "1.17.4"
+
+"@garfish/core@1.17.4":
+  version "1.17.4"
+  resolved "https://registry.yarnpkg.com/@garfish/core/-/core-1.17.4.tgz#69979db3eda6f283cedc69e558345b04257a62ca"
+  integrity sha512-TXRYIGcoSTpyZiK7hPtZ3TmDgxex0sFvMCfbr7vhrjs4m5x+oMIG9Kndotao2csEJ1W1kq701jsk6RglAX/uXA==
+  dependencies:
+    "@alioth-org/es-module-lexer" "^1.1.0"
+    "@garfish/hooks" "1.17.4"
+    "@garfish/loader" "1.17.4"
+    "@garfish/utils" "1.17.4"
+    eventemitter2 "^6.4.5"
+
+"@garfish/hooks@1.17.4":
+  version "1.17.4"
+  resolved "https://registry.yarnpkg.com/@garfish/hooks/-/hooks-1.17.4.tgz#21abda7a5cf85420c8ab24b9714e37a3ff0b17ed"
+  integrity sha512-ww3yNFp/bnopBXltPYyB2qA3O42JPkIlCGxgD20aUHqtZDqu2KGIKLiIriWlOil+g32exGxXRk0NR19/QjcUdA==
+  dependencies:
+    "@garfish/utils" "1.17.4"
+
+"@garfish/loader@1.17.4":
+  version "1.17.4"
+  resolved "https://registry.yarnpkg.com/@garfish/loader/-/loader-1.17.4.tgz#07859606df65bcea193996a4a7620d0360937eb8"
+  integrity sha512-ttnD9D3gplO0tJCV6r+HFh2evs0F8RSs1u9AjGNBZhIPXgpXou1xmY0EVYhfEObUIyDrd246PUFZAQlUWUswIQ==
+  dependencies:
+    "@garfish/hooks" "1.17.4"
+    "@garfish/utils" "1.17.4"
+
+"@garfish/router@1.17.4":
+  version "1.17.4"
+  resolved "https://registry.yarnpkg.com/@garfish/router/-/router-1.17.4.tgz#b9e69df70cd4de5ffc37481e50ffe2c228c07b97"
+  integrity sha512-F5VjeZUjOIaT18X9CZKScUSW6xJE5QGLlwmU7LOwLqqOuN7Sn4rBJWf7AgIPRrqBpdiK402sgp80EYH3GSal8Q==
+  dependencies:
+    "@garfish/core" "1.17.4"
+    "@garfish/utils" "1.17.4"
+
+"@garfish/utils@1.17.4":
+  version "1.17.4"
+  resolved "https://registry.yarnpkg.com/@garfish/utils/-/utils-1.17.4.tgz#b78d6568212cb7582cbfe82f63e647752bdf0115"
+  integrity sha512-AiZsKaqPcQcBqq6X5SPkcEc/4R77Qz32+AGLJiI5PYwIfpwDN24ssIBTsY7/afsan7AHG9ChHJKxuIp7y3dl5Q==
+  dependencies:
+    debug "^4.3.4"
 
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
@@ -905,7 +962,7 @@ daisyui@^4.6.0:
     picocolors "^1"
     postcss-js "^4"
 
-debug@^4.1.0, debug@^4.3.1:
+debug@^4.1.0, debug@^4.3.1, debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
@@ -981,6 +1038,11 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==
 
+eventemitter2@^6.4.5:
+  version "6.4.9"
+  resolved "https://registry.yarnpkg.com/eventemitter2/-/eventemitter2-6.4.9.tgz#41f2750781b4230ed58827bc119d293471ecb125"
+  integrity sha512-JEPTiaOt9f04oa6NOkc4aH+nVp5I3wEjpHbIPqfgCdD5v5bUzy7xQqwcVO2aDQgOWhI28da57HksMrzK9HlRxg==
+
 fast-glob@^3.3.0:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.3.2.tgz#a904501e57cfdd2ffcded45e99a54fef55e46129"
@@ -1033,6 +1095,17 @@ function-bind@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.2.tgz#2c02d864d97f3ea6c8830c464cbd11ab6eab7a1c"
   integrity sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==
+
+garfish@^1.17.4:
+  version "1.17.4"
+  resolved "https://registry.yarnpkg.com/garfish/-/garfish-1.17.4.tgz#8e289831295179f857ae44e0b199bcb4e5d42168"
+  integrity sha512-4rR6fjcw133VG+1WCFfHOelttaev0Uw3vDsOmRDC1fdeqY1n1Nc0Wz/lLC/5mN7VHfkBuEmQ3Y9Q11tPlb9a1g==
+  dependencies:
+    "@garfish/browser-snapshot" "1.17.4"
+    "@garfish/browser-vm" "1.17.4"
+    "@garfish/core" "1.17.4"
+    "@garfish/router" "1.17.4"
+    "@garfish/utils" "1.17.4"
 
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
@@ -1374,11 +1447,6 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
-regenerator-runtime@^0.14.0:
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz#356ade10263f685dda125100cd862c1db895327f"
-  integrity sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==
-
 resolve@^1.1.7, resolve@^1.22.2:
   version "1.22.8"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.8.tgz#b6c87a9f2aa06dfab52e3d70ac8cde321fa5a48d"
@@ -1689,13 +1757,6 @@ wrap-ansi@^8.1.0:
     ansi-styles "^6.1.0"
     string-width "^5.0.1"
     strip-ansi "^7.0.1"
-
-wujie@^1.0.22:
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/wujie/-/wujie-1.0.22.tgz#15722d07a385c99e93549f8e84aba1af973dc86b"
-  integrity sha512-gzx13fp9hgTHdV9XetkVmp794uDSR93Zs9jLr891RaWRuMiLFoxh3Pe4qbmW604SxI8nMTHeIRydbgC7YxQ50Q==
-  dependencies:
-    "@babel/runtime" "^7.18.6"
 
 yallist@^3.0.2:
   version "3.1.1"

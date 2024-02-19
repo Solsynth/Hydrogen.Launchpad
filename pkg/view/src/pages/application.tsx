@@ -1,7 +1,7 @@
 import { createMemo, onMount } from "solid-js";
 import { useWellKnown } from "../stores/wellKnown.tsx";
 import { useParams } from "@solidjs/router";
-import { preloadApp, setupApp, startApp } from "wujie";
+import Garfish from "garfish";
 
 export default function ApplicationPage() {
   const wellKnown = useWellKnown();
@@ -14,18 +14,19 @@ export default function ApplicationPage() {
     return item;
   });
 
-  const cfg = createMemo(() => ({
-    el: "#subapp",
-    name: "x",
-    url: manifest().link,
-    exec: true,
-    sync: true
-  }));
 
-  onMount(() => {
-    setupApp(cfg());
-    preloadApp(cfg());
-    startApp(cfg()).then(r => console.log(r));
+  onMount(async () => {
+    // @ts-ignore
+    window.__LAUNCHPAD_TARGET__ = manifest().link;
+    const app = await Garfish.loadApp(manifest().id, {
+      domGetter: "#subapp",
+      entry: manifest().link,
+      basename: `/o/${params.slug}`,
+      cache: true,
+      sandbox: false
+    });
+
+    await app?.mount();
   });
 
   return (
