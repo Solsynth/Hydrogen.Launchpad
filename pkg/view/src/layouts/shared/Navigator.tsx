@@ -25,16 +25,16 @@ export default function Navigator(props: any) {
   }
 
   return (
-    <div class="drawer lg:drawer-open">
+    <div class="drawer">
       <input id="navigation-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content">
         {props.children}
 
         <label
           for="navigation-drawer"
-          class="w-12 h-12 z-[99] btn btn-primary drawer-button lg:hidden fixed left-4 bottom-4"
+          class="max-md:w-8 md:w-12 aspect-square z-[50] btn btn-primary drawer-button fixed bottom-[50%]"
         >
-          <i class="fa-solid fa-rocket"></i>
+          <i class="fa-solid fa-chevron-right"></i>
         </label>
       </div>
       <div class="drawer-side z-[100]">
@@ -61,7 +61,7 @@ export default function Navigator(props: any) {
           </ul>
 
           <ul class="menu">
-          <li>
+            <li>
               <Show when={userinfo?.isLoggedIn} fallback={
                 <a href={`${components()["identity"]}/auth/login`} class="btn btn-sm glass">Login</a>
               }>
